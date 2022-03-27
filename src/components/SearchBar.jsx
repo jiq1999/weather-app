@@ -1,4 +1,6 @@
 import React from 'react';
+import { IoSearchOutline } from 'react-icons/io5';
+import Styles from './SearchBar.module.css';
 
 export default function SearchBar({ onSearch }) {
   // acá va tu código
@@ -10,9 +12,9 @@ export default function SearchBar({ onSearch }) {
   }
 
   return (
-    <div>
-      <input id="search-bar-input" />
-      <button onClick={handleOnSearch}>ADD</button>
+    <div className={Styles.searchBar}>
+      <input placeholder="Add a new city" id="search-bar-input" />
+      <button onClick={handleOnSearch}><IoSearchOutline /></button>
     </div>
   )
 };
