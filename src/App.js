@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
-import SearchBar from './components/SearchBar.jsx';
-//import data, { Cairns } from './data.js';
+import City from './components/City.jsx';
+import Nav from './components/Nav.jsx';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -52,10 +52,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <SearchBar onSearch={onSearch} />
-      <Cards cities={cities} onRemove={handleRemoveCity} />
-    </div>
+      <div className="App">
+        <Nav onSearch={onSearch} />
+        <Routes>
+          <Route path="/" element={<Cards cities={cities} onRemove={handleRemoveCity}/>} />
+          <Route path="/city/:id" element={<City />} />
+        </Routes>
+      </div>
   );
 }
 
