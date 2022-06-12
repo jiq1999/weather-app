@@ -14,8 +14,8 @@ export default function Card({ max, min, name, img, onClose, id }) {
     
       <div className={Styles.card}>
         <button className={Styles.btn} onClick={handleOnChange}><IoIosClose /></button>
-        <Link to={`/city/${id}`}>
-        <span className={Styles.cityName}>{name}</span>
+        <Link className={Styles.cityName} to={`/city/${id}`}>
+          <span>{name}</span>
         </Link>
         <div className={Styles.weather}>
           <span className={Styles.weatherTitle}>Min</span>
