@@ -10,8 +10,7 @@
     border-width: 0px;
     border-radius: 10px;
     font-size: 14px;
-    background-color: #fff;
-    opacity: 40%;
+    background-color: rgb(255, 255, 255, 0.4);
 }
 
 .searchBar > button {
