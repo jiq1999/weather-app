@@ -10,10 +10,10 @@ export default function Nav({ onSearch }) {
                 <Link className={Styles.link} to="/">
                     <span className={Styles.brand}>
                         <img
-                            id="logo-henry"
+                            id="logo"
                             src={logo}
-                            width="30"
-                            height="30"
+                            width="40px"
+                            height="40px"
                             alt=""
                         />
                         WEATHER APP

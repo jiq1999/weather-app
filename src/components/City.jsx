@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Styles from './City.module.css';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -35,20 +36,21 @@ export default function City() {
     },[params.id])
 
     if (city === undefined) {
-        return <h1>LOADING...</h1>
+        return <h1 className={Styles.title}>LOADING...</h1>
     } else if (city === null) {
-        return <h1>404: CITY NOT FOUND</h1>
+        return <h1 className={Styles.title}>404: CITY NOT FOUND</h1>
     } else {
         return (
-            <div>
+            <div className={Styles.container}>
                 <h2>{city.name}</h2>
-                <div>
-                    <span>Temp:{city.temp}</span>
-                    <span>Weather:{city.weather}</span>
-                    <span>Wind:{city.wind}</span>
-                    <span>Clouds:{city.clouds}</span>
-                    <span>Latitude:{city.latitude}º</span>
-                    <span>Longitud:{city.longitud}º</span>
+                <h3>{city.temp}º</h3>
+                <img src={`http://openweathermap.org/img/wn/${city.img}@2x.png`} alt="icon"/>
+                <div className={Styles.card}>
+                  <span>Weather:{city.weather}</span>
+                  <span>Wind:{city.wind}</span>
+                  <span>Clouds:{city.clouds}</span>
+                  <span>Latitude:{city.latitude}º</span>
+                  <span>Longitud:{city.longitud}º</span>
                 </div>
             </div>
         )

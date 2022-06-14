@@ -16,7 +16,7 @@ const [cityName, setCityName] = useState("");
 
   return (
     <form className={Styles.searchBar} onSubmit={handleOnSearch}>
-      <input placeholder="Add a new city" value={cityName} onChange={(e) => setCityName(e.target.value)} />
+      <input placeholder="Search for a city" value={cityName} onChange={(e) => setCityName(e.target.value)} />
       <button type="submit"><IoSearchOutline /></button>
     </form>
   )
