@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
 import Cards from './components/Cards.jsx';
 import City from './components/City.jsx';
 import Nav from './components/Nav.jsx';
+import Styles from './App.module.css';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -52,7 +52,7 @@ function App() {
   }
 
   return (
-      <div className="App">
+      <div className={Styles.App}>
         <Nav onSearch={onSearch} />
         <Routes>
           <Route path="/" element={<Cards cities={cities} onRemove={handleRemoveCity}/>} />
