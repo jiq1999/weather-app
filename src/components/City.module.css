@@ -79,7 +79,7 @@
 .line {
     width: 90%;
     color: #bababa;
-    opacity: 60%;
+    /*opacity: 60%;*/
     margin: 0px;
     align-self: center;
 }
@@ -113,13 +113,5 @@
         padding-top: 10px;
         padding-bottom: 10px;
         color: #222;
-    }
-
-    .line {
-        width: 90%;
-        color: #bababa;
-        opacity: 60%;
-        margin: 0px;
-        align-self: center;
     }
 }
