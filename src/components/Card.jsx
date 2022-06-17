@@ -11,19 +11,21 @@ export default function Card({ max, min, name, img, onClose, id }) {
   }
   
   return (
-    <Link className={Styles.card} to={`/city/${id}`}>
+    <div className={Styles.card}>
       <button className={Styles.btn} onClick={handleOnChange}><IoIosClose /></button>
+      <Link className={Styles.cont} to={`/city/${id}`}>
         <span  className={Styles.cityName}>{name}</span>
-      <div className={Styles.weather}>
-        <span className={Styles.weatherTitle}>Min</span>
-        <span className={Styles.weatherTemp}>{min}°</span>
-      </div>
-      <div className={Styles.weather}>
-        <span className={Styles.weatherTitle}>Max</span>
-        <span className={Styles.weatherTemp}>{max}°</span>
-      </div>
-      <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="Weather Icon"/>
-    </Link>
+        <div className={Styles.weather}>
+          <span className={Styles.weatherTitle}>Min</span>
+          <span className={Styles.weatherTemp}>{min}°</span>
+        </div>
+        <div className={Styles.weather}>
+          <span className={Styles.weatherTitle}>Max</span>
+          <span className={Styles.weatherTemp}>{max}°</span>
+        </div>
+        <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="Weather Icon"/>
+      </Link>
+    </div>
   )
 };
 

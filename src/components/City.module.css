@@ -1,40 +1,125 @@
+.global {
+    display: flex;
+    justify-content: center;
+}
+
 .container {
-    
+    color: #e8e8e8;
+    text-transform: uppercase;
+    border-width: 0px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 65%;
+    background-color: rgb(255, 255, 255, 0.5);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+}
+
+.date {
+    font-size: 16px;
 }
 
 .title {
     color: #e8e8e8;
-    font-size: 26px;
-    padding-top: 50px;
-    font-weight: 600;
+    font-size: 32px;
+    padding-top: 100px;
+    font-weight: 400;
+}
+
+.cityName {
+    color: #e8e8e8;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.temp {
+    font-size: 46px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.hlC {
+    padding-bottom: 40px;
+}
+
+.hl {
+    padding: 10px;
+}
+
+.img {
+    font-size: 200px;
 }
 
 .card {
-    align-items: center;
-    border-style: solid;
+    align-items: initial;
     border-width: 0px;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    width: 300px;
-    color: #000;
-    text-decoration: none;
+    width: 100%;
     background-color: rgb(255, 255, 255, 0.5);
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #222;
 }
 
-@media only screen and (max-width: 600px){ 
-    .card {
-        align-items: center;
-        border-style: solid;
+.item {
+    display: flex;
+    justify-content: space-evenly;
+    color: #2b2b2b;
+    font-size: 20px;
+}
+
+.line {
+    width: 90%;
+    color: #bababa;
+    opacity: 60%;
+    margin: 0px;
+    align-self: center;
+}
+
+@media only screen and (max-width: 768px){ 
+    .container {
+        color: #e8e8e8;
+        text-transform: uppercase;
         border-width: 0px;
         border-radius: 10px;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: 1fr 2fr;
+        display: flex;
+        flex-direction: column;
         position: relative;
-        width: 95%;
+        width: 90%;
         background-color: rgb(255, 255, 255, 0.5);
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-top: 30px;
+    }
+    
+    .card {
+        align-items: initial;
+        border-width: 0px;
+        border-radius: 0px 0px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        background-color: rgb(255, 255, 255, 0.5);
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #222;
+    }
+
+    .line {
+        width: 90%;
+        color: #bababa;
+        opacity: 60%;
+        margin: 0px;
+        align-self: center;
     }
 }

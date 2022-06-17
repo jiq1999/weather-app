@@ -6,10 +6,8 @@
 }
 
 .links {
-    display: flex;
-    gap: 5px;
-    align-items: center;
     margin: 15px;
+    align-self: flex-start;
 }
 
 .link {
@@ -23,15 +21,4 @@
     display: flex;
     gap: 5px;
     align-items: center;
-}
-
-@media only screen and (max-width: 768px) {
-    .nav {
-        display: flex;
-        flex-direction: column;
-    }
-    .links {
-        margin: 15px;
-        align-self: flex-start;
-    }
 }

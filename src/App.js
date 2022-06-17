@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Cards from './components/Cards.jsx';
 import City from './components/City.jsx';
-import Nav from './components/Nav.jsx';
 import Styles from './App.module.css';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -30,7 +29,9 @@ function App() {
     )
       .then(r => r.json())
       .then(recurso => {
-        if(recurso.main !== undefined) {
+        if (cities.find(city => city.id === recurso.id)) {
+          return alert("CITY ALREADY ADDED");
+        } else if (recurso.main !== undefined) {
           const city = {
             min: Math.round(recurso.main.temp_min),
             max: Math.round(recurso.main.temp_max),
@@ -53,9 +54,8 @@ function App() {
 
   return (
       <div className={Styles.App}>
-        <Nav onSearch={onSearch} />
         <Routes>
-          <Route path="/" element={<Cards cities={cities} onRemove={handleRemoveCity}/>} />
+          <Route path="/" element={<Cards cities={cities} onRemove={handleRemoveCity} onSearch={onSearch} />} />
           <Route path="/city/:id" element={<City />} />
         </Routes>
       </div>
